@@ -10,15 +10,32 @@ public class ThrowingObject : MonoBehaviour
 	private Counter _counter;
 	private Vector3 CustomWebPosition;
 	private Vector3 ThrowingVector;
+	private Vector3 RotationVector;
 	private float _throwingForce = 3000f;
 	private bool IsObjectStucked;
 	private bool IsObjectedWebed;
+	private bool NeedToRotate = true;
 	private void Awake()
 	{
 		IsStucked = false;
 		_rigidbody = GetComponent<Rigidbody>();
 		_rigidbody.isKinematic = true;
-		CustomWebPosition = new Vector3(0, 0, -0.1f);
+		CustomWebPosition = new Vector3(0, 0, -0.3f);
+
+		int num1 = Random.Range(0, 3);
+		int num2 = Random.Range(0, 3 - num1);
+		int num3 = Random.Range(0, 3 - num1 - num2);
+
+		RotationVector = new Vector3(num1, num2, num3);
+	}
+	private void FixedUpdate()
+	{
+		if (NeedToRotate)
+			RotateObject();
+	}
+	private void RotateObject()
+	{
+		_rigidbody.transform.Rotate(RotationVector);
 	}
 	private void OnCollisionEnter(Collision collision)
 	{
@@ -39,12 +56,13 @@ public class ThrowingObject : MonoBehaviour
 	}
 	private void GetObjectStucked()
 	{
+		NeedToRotate = false;
 		gameObject.tag = "Wall";
 		_counter.IncreaseAmountOfCollectedObjects();
 		_rigidbody.isKinematic = true;
 		IsStucked = true;
 		Web = Instantiate(SpiderWeb, transform.position + CustomWebPosition, Quaternion.identity);
-		Web.transform.Rotate(new Vector3(0, 0, Random.Range(0, 360f)));
+		Web.transform.Rotate(new Vector3(0, 180f, Random.Range(0, 360f)));
 	}
 	public void TrowObjectUp()
 	{

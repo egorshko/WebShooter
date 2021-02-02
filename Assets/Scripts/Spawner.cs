@@ -1,10 +1,9 @@
-﻿using System.Globalization;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
 	public Transform[] SpawnPoints;
-	public GameObject FallingObject;
+	public GameObject[] FallingObjects;
 	public int AmountOfThrowingObject;
 	public int TimeBeforeThrownig;
 
@@ -39,7 +38,7 @@ public class Spawner : MonoBehaviour
 	}
 	private void SpawnObject()
 	{
-		_throwedObject = Instantiate(FallingObject, SpawnPoints[_currentLvlPreset.TrowingObjects[NumberOfObject].SpawnPoint].position, Quaternion.identity);
+		_throwedObject = Instantiate(FallingObjects[Random.Range(0, FallingObjects.Length)], SpawnPoints[_currentLvlPreset.TrowingObjects[NumberOfObject].SpawnPoint].position, Quaternion.identity);
 		NumberOfObject++;
 		_throwedObjectScript = _throwedObject.GetComponent<ThrowingObject>();
 		_throwedObjectScript.SetCounter(_counter);
