@@ -3,6 +3,7 @@
 public class WebShooter : MonoBehaviour
 {
     public GameObject Web;
+    public float WebSpeed;
     public Animator RightHandAnimator;
     public Animator LeftHandAnimator;
     public Transform RightHandTransform;
@@ -40,7 +41,7 @@ public class WebShooter : MonoBehaviour
     {
         if(WebObject!= null)
         {
-            WebObject.transform.Translate(TouchPosition * Time.deltaTime * 15f, Space.World);
+            WebObject.transform.Translate(TouchPosition * Time.deltaTime * WebSpeed, Space.World);
         }
     }
 }

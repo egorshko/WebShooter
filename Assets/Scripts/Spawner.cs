@@ -4,8 +4,11 @@ public class Spawner : MonoBehaviour
 {
 	public Transform[] SpawnPoints;
 	public GameObject[] FallingObjects;
+	public GameObject Coin;
+	public int MaxCoins;
 	public int AmountOfThrowingObject;
 	public int TimeBeforeThrownig;
+	public bool IsBonusRound;
 
 
 	private MainGameController _mainGameController;
@@ -23,18 +26,43 @@ public class Spawner : MonoBehaviour
 	}
 	public void StartSpawner(LvlPreset lvlPreset)
 	{
-		_currentLvlPreset = lvlPreset;
-		_counter.SetMaxAmountOfObjects(_currentLvlPreset.TrowingObjects.Length);
-		for (int i = 0; i < _currentLvlPreset.TrowingObjects.Length; i++)
+		if (!IsBonusRound)
 		{
-			TimeBeforeThrowing += _currentLvlPreset.TrowingObjects[i].TimeBeforeThrowing;
-			Invoke("SpawnObject", TimeBeforeThrowing);
-			if (i == _currentLvlPreset.TrowingObjects.Length - 1)
+			_currentLvlPreset = lvlPreset;
+			_counter.SetMaxAmountOfObjects(_currentLvlPreset.TrowingObjects.Length);
+			for (int i = 0; i < _currentLvlPreset.TrowingObjects.Length; i++)
 			{
-				TimeBeforeThrowing += 5;
-				Invoke("EndLvl", TimeBeforeThrowing);
+				TimeBeforeThrowing += _currentLvlPreset.TrowingObjects[i].TimeBeforeThrowing;
+				Invoke("SpawnObject", TimeBeforeThrowing);
+				if (i == _currentLvlPreset.TrowingObjects.Length - 1)
+				{
+					TimeBeforeThrowing += 5;
+					Invoke("EndLvl", TimeBeforeThrowing);
+				}
 			}
 		}
+		else
+		{
+			for (int i = 0; i < MaxCoins; i++)
+			{
+				TimeBeforeThrowing += 0.2f;
+				Invoke("SpawnCoin", TimeBeforeThrowing);
+				if (i == MaxCoins - 1)
+				{
+					TimeBeforeThrowing += 5;
+					Invoke("EndLvl", TimeBeforeThrowing);
+				}
+			}
+		}
+	}
+	private void SpawnCoin()
+	{
+		_throwedObject = Instantiate(Coin, SpawnPoints[Random.Range(0, SpawnPoints.Length)].position, Quaternion.identity);
+		//NumberOfObject++;
+		_throwedObjectScript = _throwedObject.GetComponent<ThrowingObject>();
+		_throwedObjectScript.SetCounter(_counter);
+		_throwedObjectScript.SetForce(Random.Range(3000f, 3501f));
+		_throwedObjectScript.TrowObjectUp();
 	}
 	private void SpawnObject()
 	{

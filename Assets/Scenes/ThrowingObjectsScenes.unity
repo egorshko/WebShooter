@@ -211,6 +211,8 @@ GameObject:
   - component: {fileID: 83238044}
   - component: {fileID: 83238043}
   - component: {fileID: 83238042}
+  - component: {fileID: 83238046}
+  - component: {fileID: 83238047}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Wall
@@ -293,6 +295,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &83238046
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83238041}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &83238047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83238041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e60fc6440cb2641820323f9713df80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Web: {fileID: 5148378486662662931, guid: 94185bfaa30a10349bbbd2991f21c7d1, type: 3}
 --- !u!1 &92065401
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,11 +562,13 @@ MonoBehaviour:
   - {fileID: 280471978}
   FallingObjects:
   - {fileID: 8709619177468810972, guid: e37638278376d9a4fbbe6b7e31376667, type: 3}
-  - {fileID: 6192290118623484884, guid: ebe878df3dcc99a4da32a55089f3afbe, type: 3}
   - {fileID: 2829771622186152616, guid: e2a960d22e881ad49ac9ff1c5c7243c1, type: 3}
-  - {fileID: 443143682810724011, guid: 9923aa5b39d524d48a64294825cec0b2, type: 3}
+  - {fileID: 6192290118623484884, guid: ebe878df3dcc99a4da32a55089f3afbe, type: 3}
+  Coin: {fileID: 2599189662765754411, guid: 1335ae14ec5ac7b418dee4ee90eef8b0, type: 3}
+  MaxCoins: 50
   AmountOfThrowingObject: 10
   TimeBeforeThrownig: 2
+  IsBonusRound: 0
 --- !u!4 &193578057
 Transform:
   m_ObjectHideFlags: 0
@@ -579,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Web: {fileID: 6963963498335505446, guid: 9d686cc8b8b14084bbb47ee08843dcec, type: 3}
+  WebSpeed: 15
   RightHandAnimator: {fileID: 1139454726}
   LeftHandAnimator: {fileID: 1597042719}
   RightHandTransform: {fileID: 1797815381}
@@ -624,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllLvlPresets:
-  - {fileID: 11400000, guid: 953226fef6c9d7a4db1c6af3fa8d1827, type: 2}
+  - {fileID: 11400000, guid: 403f1a158b51e374887a8db38f445d17, type: 2}
 --- !u!114 &193578063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1709,6 +1743,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Web_shooting_righthand
       objectReference: {fileID: 0}
+    - target: {fileID: 1608674454039270174, guid: 7f56a4e11ee4f4446bffa00c2eed09b8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 578c268ec2e09cf4885d38389f1e0759, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f56a4e11ee4f4446bffa00c2eed09b8, type: 3}
 --- !u!1 &1290960612
@@ -2492,6 +2531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Web_shooting_righthand
       objectReference: {fileID: 0}
+    - target: {fileID: 1608674454039270174, guid: 7f56a4e11ee4f4446bffa00c2eed09b8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 578c268ec2e09cf4885d38389f1e0759, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f56a4e11ee4f4446bffa00c2eed09b8, type: 3}
 --- !u!1 &1792580142

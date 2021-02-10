@@ -46,9 +46,10 @@ public class ThrowingObject : MonoBehaviour
 		}
 		if (collision.gameObject.CompareTag("Web"))
 		{
+			Destroy(collision.gameObject);
 			IsObjectedWebed = true;
 			ThrowingVector = transform.position;
-			ThrowingVector.z = 7500f;
+			ThrowingVector.z = 8500f;
 			ThrowingVector.x = (transform.position.x - collision.transform.position.x) * 1000;
 			ThrowingVector.y = (transform.position.y - collision.transform.position.y) * 2500;
 			_rigidbody.AddForce(ThrowingVector);
