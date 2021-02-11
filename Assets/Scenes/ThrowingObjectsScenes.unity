@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+  m_AmbientSkyColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -563,7 +563,14 @@ MonoBehaviour:
   FallingObjects:
   - {fileID: 8709619177468810972, guid: e37638278376d9a4fbbe6b7e31376667, type: 3}
   - {fileID: 2829771622186152616, guid: e2a960d22e881ad49ac9ff1c5c7243c1, type: 3}
-  - {fileID: 6192290118623484884, guid: ebe878df3dcc99a4da32a55089f3afbe, type: 3}
+  - {fileID: 2290384731048984741, guid: 88d4338f07b1bcf47a5ad3fdf15c4daf, type: 3}
+  - {fileID: 4095783677546662075, guid: 1b1a9caf8e20d5e409439c573f2b6cfa, type: 3}
+  - {fileID: 7045489225061178052, guid: 922da3c978635a046b73877ca2aec17b, type: 3}
+  - {fileID: 7278183336019743966, guid: 57ca4b0e0977d9b4c8af7e90f42d180a, type: 3}
+  - {fileID: 1980329445435923479, guid: 50bc4f488f7ed2e42acefef0941165af, type: 3}
+  - {fileID: 2912792564968576583, guid: 7fd3a32f2e780ba48883a0bec481052b, type: 3}
+  - {fileID: 6676224893821505286, guid: cd1e566fe6fd3734499a4bd6ba528d46, type: 3}
+  - {fileID: 2599189662765754411, guid: 1335ae14ec5ac7b418dee4ee90eef8b0, type: 3}
   Coin: {fileID: 2599189662765754411, guid: 1335ae14ec5ac7b418dee4ee90eef8b0, type: 3}
   MaxCoins: 50
   AmountOfThrowingObject: 10
@@ -816,7 +823,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bbb75ab623fad564fb788dcb1af4061c, type: 2}
+  - {fileID: 2100000, guid: 61992273646a84447af0a4df7059c2b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1107,11 +1114,11 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.6
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 20
+  m_CookieSize: 28.63
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -1138,7 +1145,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 733a741dd0604df4398e11904731b45f, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -1163,13 +1170,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.42030814, y: -0.09462498, z: 0.044124294, w: 0.90135473}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.41014376, y: -0.095115274, z: 0.04305723, w: 0.906025}
+  m_LocalPosition: {x: 6.13, y: 12.49, z: -13.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50.000004, y: -11.986001, z: 0}
+  m_LocalEulerAnglesHint: {x: 48.711002, y: -11.986001, z: 0}
 --- !u!1 &766517170
 GameObject:
   m_ObjectHideFlags: 0
