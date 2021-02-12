@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material 4
   m_Shader: {fileID: 4800000, guid: d12428961551799408aa97256fd770c3, type: 3}
-  m_ShaderKeywords: N_F_NM_ON N_F_O_ON N_F_RELGI_ON N_F_SS_ON _EMISSION _NORMALMAP
+  m_ShaderKeywords: N_F_O_ON N_F_RELGI_ON N_F_SS_ON _EMISSION _NORMALMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 0f7db39669cd8b44aba9eb86239ee598, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -159,7 +159,7 @@ Material:
     - _N_F_HPSS: 0
     - _N_F_MC: 0
     - _N_F_NLASOBF: 0
-    - _N_F_NM: 1
+    - _N_F_NM: 0
     - _N_F_O: 1
     - _N_F_PT: 0
     - _N_F_R: 0
@@ -172,11 +172,11 @@ Material:
     - _N_F_STIAL: 0
     - _N_F_STIS: 0
     - _NoisyOutlineIntensity: 0
-    - _NormalMapIntensity: 7
+    - _NormalMapIntensity: 1
     - _OcclusionStrength: 1
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
-    - _OutlineWidth: 5
+    - _OutlineWidth: 0.5
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _OverallShadowColorPower: 1
@@ -238,9 +238,9 @@ Material:
     - _EmissionColor: {r: 0.3301887, g: 0.2807, b: 0.19157174, a: 1}
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 0.66241914, b: 0.504717, a: 1}
-    - _OutlineColor: {r: 1, g: 0.97145367, b: 0.6556604, a: 1}
-    - _OutlineOffset: {r: 0, g: 0, b: 0, a: 2}
+    - _MainColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+    - _OutlineColor: {r: 0.990566, g: 0.92943364, b: 0.23362409, a: 1}
+    - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0.4433962, g: 0.35456753, b: 0.13803846, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
