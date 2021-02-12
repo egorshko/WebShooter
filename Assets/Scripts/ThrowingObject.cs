@@ -54,6 +54,8 @@ public class ThrowingObject : MonoBehaviour
 			ThrowingVector.y = (transform.position.y - collision.transform.position.y) * 2500;
 			_rigidbody.AddForce(ThrowingVector);
 		}
+
+      		
 	}
 	private void GetObjectStucked()
 	{
