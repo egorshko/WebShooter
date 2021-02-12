@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 484895140215028470}
   m_Layer: 0
   m_Name: donut_01
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,8 +58,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c30e6c73df5039e4a8e5f0f4ab84b415, type: 2}
-  - {fileID: 2100000, guid: a66af5fa26e07f244b45152ce939fe0c, type: 2}
+  - {fileID: 2100000, guid: 793b8115ec3b2fc44ac737824e07931c, type: 2}
+  - {fileID: 2100000, guid: 70f4de0a2671a3444881c712ab95656e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
