@@ -42,10 +42,15 @@ public class InputController : MonoBehaviour
 		}
 		else
 		{
-			if (Input.GetMouseButton(0))
+			if (Input.GetMouseButtonDown(0))
 			{
 				DragingStarted = true;
-				TouchPosition = Input.mousePosition / 100;
+				TouchPosition = CameraForInput.ScreenToWorldPoint(Input.mousePosition);
+				_webShooter.ShootWeb(TouchPosition);
+			}
+			else
+			{
+				DragingStarted = false;
 			}
 		}
 	}

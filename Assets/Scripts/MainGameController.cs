@@ -17,7 +17,7 @@ public class MainGameController : MonoBehaviour
     }
     private void Start()
     {
-        _spawner.StartSpawner(AllLvlPresets[Random.Range(0, AllLvlPresets.Length)]);
+        //_spawner.StartSpawner(AllLvlPresets[Random.Range(0, AllLvlPresets.Length)]);
     }
     public void EndGame()
     {

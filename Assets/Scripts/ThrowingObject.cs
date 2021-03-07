@@ -4,6 +4,7 @@ public class ThrowingObject : MonoBehaviour
 {
 	public GameObject SpiderWeb;
 	public bool IsStucked;
+	public bool IsCoin;
 
 	private Rigidbody _rigidbody;
 	private GameObject Web;
@@ -46,7 +47,9 @@ public class ThrowingObject : MonoBehaviour
 		}
 		if (collision.gameObject.CompareTag("Web"))
 		{
-			Destroy(collision.gameObject);
+			//Destroy(collision.gameObject);
+			SphereCollider collider = collision.gameObject.GetComponent<SphereCollider>();
+			collider.isTrigger = true;
 			IsObjectedWebed = true;
 			ThrowingVector = transform.position;
 			ThrowingVector.z = 8500f;
@@ -59,9 +62,16 @@ public class ThrowingObject : MonoBehaviour
 	}
 	private void GetObjectStucked()
 	{
+		if (IsCoin)
+		{
+			_counter.IncreaseAmountOfCollectedCoins();
+		}
+		else
+		{
+			_counter.IncreaseAmountOfCollectedObjects();
+		}
 		NeedToRotate = false;
 		gameObject.tag = "Wall";
-		_counter.IncreaseAmountOfCollectedObjects();
 		_rigidbody.isKinematic = true;
 		IsStucked = true;
 		Web = Instantiate(SpiderWeb, transform.position + CustomWebPosition, Quaternion.identity);

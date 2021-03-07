@@ -4,6 +4,7 @@ public class Counter : MonoBehaviour
 {
     public int MaxAmountOfObjects;
     public int AmountOfCollectedObjects;
+    public int AmountOfCollectedCoins;
 
     private UIController _uiController;
 
@@ -15,6 +16,10 @@ public class Counter : MonoBehaviour
     {
         MaxAmountOfObjects = ObjectsAmount;
         _uiController.SetMaxSliderNum(ObjectsAmount);
+    }
+    public void IncreaseAmountOfCollectedCoins()
+    {
+        AmountOfCollectedCoins++;
     }
     public void IncreaseAmountOfCollectedObjects()
     {

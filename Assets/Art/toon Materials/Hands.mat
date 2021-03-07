@@ -136,7 +136,7 @@ Material:
     - _GlossTextureSoftness: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HighlightColorPower: 1
+    - _HighlightColorPower: 1.5
     - _LightAffectOutlineColor: 0
     - _LightAffectRimLightColor: 0
     - _LightAffectShadow: 0
@@ -204,11 +204,11 @@ Material:
     - _SelfLitIntensity: 0
     - _SelfLitPower: 2
     - _SelfShadowAffectedByLightShadowStrength: 0
-    - _SelfShadowHardness: 0.678
+    - _SelfShadowHardness: 0.583
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowRealtimeShadowIntensity: 0.609
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0.971
+    - _SelfShadowThreshold: 0.991
     - _ShadowColorTexturePower: 0
     - _ShadowHardness: 0
     - _ShadowTColorPower: 1
@@ -238,12 +238,12 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.8584906, g: 0.3077608, b: 0.33760965, a: 1}
+    - _MainColor: {r: 0.94509804, g: 0, b: 0.04900138, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
-    - _OverallShadowColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+    - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SelfShadowRealTimeShadowColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+    - _SelfShadowRealTimeShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowTColor: {r: 1, g: 1, b: 1, a: 1}
     - _XYZPosition: {r: 0, g: 0, b: 0, a: 0}
